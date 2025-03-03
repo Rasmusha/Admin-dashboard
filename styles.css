@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+
+/* Side-panel start*/
+
+.sidebar {
+    background-color: #FFA500;
+    grid-row: 1 / 9;
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 50px;
+    padding-left: 20px;
+}
+
+.logo {
+    padding-top: 10px;
+}
+
+.logo h1 {
+    padding-left: 15px;
+    color: #2F4F4F;
+}
+
+.logo img {
+    width: 50px; 
+    height: auto; /* Maintain aspect ratio */
+}
+
+.nav1, .nav2, .logo {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #2F4F4F;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700; 
+}
+
+/* Side-panel end */
+
+/* Header start*/
+
+.header {
+    background-color: white;
+    grid-column: 2 / 3;
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-right: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+} 
+
+.header-top {
+    padding-top: 10px;
+}
+
+.header-bottom {
+    padding-bottom: 10px;
+}
+
+#bell {
+    width: 30px;
+    height: auto;
+    place-self: center;
+}
+
+#searchbar {
+    border-radius: 20px;
+    background-color: lightgrey;
+    border:none
+}
+
+#search-icon {
+    width: 30px;
+    place-self: center;
+}
+
+#avatar {
+    width: 100px;
+    place-self: center;
+}
+
+#username {
+    place-self: center;
+    text-align: center; 
+}
+
+#username, .welcome-text > p {
+    font-weight: 700;
+}
+
+
+.header-top, .header-bottom {
+    display: grid;
+    grid-template-columns: 2fr 30%;
+}
+
+.right-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+button {
+    place-self: center;
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+    background-color: #FFA500;
+    font-weight:600;
+    border: none;
+    cursor: pointer;
+}
+
+.right-side div, .left-side div  {
+    align-self: center;
+    justify-self: center;
+}
+
+.left-side div {
+    align-self: center;
+}
+
+.left-side {
+    display: grid;
+    grid-template-columns: 0.5fr 6fr;
+}
+
+.left-side .welcome-text {
+    display: grid;
+    justify-self: start; /* Kohdistaa kaikki sisällä olevat elementit alkuun */
+    width: 80%;
+
+}
+
+.welcome-text > p:last-child {
+    font-size: 24px;
+    align-self: center;
+    
+  }
+
+.welcome-text > div {
+    justify-self: start;
+}
+
+.left-side input { 
+    height: 30px;
+    place-self: center;
+    width: 70%;
+    padding-left: 100px;
+    justify-self: start;
+}
+
+/* Header end */
+
+/* Main start*/
+
+.main-content {
+    background-color: #e2e8f0;
+    grid-row: 2 / 9;
+    display: grid;
+    padding: 30px;
+    gap: 40px;
+}
+
+h3 {
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+.project-slides {
+    display: grid;
+    grid-column: 1 / 4;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+    
+}
+
+.main-announcements {
+    grid-column: 5 / 6;
+    grid-row: 1/2;
+    border-radius: 5px;
+}
+
+.announcements, .trending-users {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: grid;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.announcements p, .trending-user p {
+    font-size: 12px;
+}
+
+.announcements hr {
+    border: 0;
+    border-top: 1px solid darkslategrey;
+    margin: 5px 0;
+}
+
+.main-projects {
+    grid-column: 1 / 5;
+    grid-row: 1 / 9;
+}
+
+.project-icon {
+    width: 25px;
+}
+
+.main-trending {
+    grid-column: 5 / 6;
+    grid-row: 2/9;
+    border-radius: 5px;
+}
+
+.project-slide {
+    background-color: white;
+    display: grid;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: solid;
+    border-left-color: #FFA500;
+    border-left-width: 5px;
+}
+
+.project-icons {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    align-items: end;
+}
+
+.trending-user img {
+    width: 70px;
+}
+
+.trending-user {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    gap: 50px;
+}
+
+.trending-user > div {
+    align-self: center;
+}
+
+/* Main end*/
